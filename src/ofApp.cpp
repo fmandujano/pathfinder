@@ -1,5 +1,10 @@
 #include "ofApp.h"
 
+void clicknodo()
+{
+    printf("nodo?");
+}
+
 //--------------------------------------------------------------
 void ofApp::setup()
 {
@@ -11,17 +16,31 @@ void ofApp::setup()
 	botonDFS = new Boton("DFS", 100,ofGetHeight() - 50 , 80,40);
 	botonAstar = new Boton("A *", 190,ofGetHeight() - 50 , 80,40);
 	botonNodo = new BotonNodo(5,5,50,50);
+    botonArista = new BotonArista(5, 60, 50,50);
 	
 	botones.push_back(botonBFS);
 	botones.push_back(botonDFS);
 	botones.push_back(botonAstar);
 	botones.push_back(botonNodo);
-	
+    botones.push_back(botonArista);
+    
+    botonNodo->OnClick = &
+    
 }
+
+
 
 //--------------------------------------------------------------
 void ofApp::update()
 {
+    if(estado == Editor)
+    {
+        updateEditor();
+    }
+    else if(estado == Simulacion)
+    {
+        updateSimulacion();
+    }
 }
 
 //--------------------------------------------------------------
@@ -44,17 +63,7 @@ void ofApp::drawEditor()
 	{
 		(*it)->Draw();
 	}
-	/*
-	 
-    //boton de nodo
 
-    //boton de arista
-    ofSetColor(ofColor::cornflowerBlue);
-    ofRect(5,60,50,50);
-    ofSetColor(ofColor::yellow);
-    ofLine(10,105, 50,65);
-
-    */
     
     
 }
@@ -63,6 +72,22 @@ void ofApp::drawSimulacion()
 {
     
 }
+
+void ofApp::updateEditor()
+{
+    for( std::vector<Boton*>::iterator it = botones.begin(); it!=botones.end(); it++)
+    {
+        (*it)->Update();
+    }
+}
+
+void ofApp::updateSimulacion()
+{
+    
+}
+
+
+
 
 
 
@@ -90,8 +115,12 @@ void ofApp::mouseDragged(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
+void ofApp::mousePressed(int x, int y, int button)
+{
+    for( std::vector<Boton*>::iterator it = botones.begin(); it!=botones.end(); it++)
+    {
+        (*it)->mousePressed(x,y,button);
+    }
 }
 
 //--------------------------------------------------------------

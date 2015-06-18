@@ -25,8 +25,20 @@ void Boton::Draw()
 
 void Boton::Update()
 {
-	printf("boton\n");
 }
+
+void Boton::mousePressed(int x, int y, int button)
+{
+    if(button==0 &&
+       x > rect.x &&
+       x < rect.x+rect.width &&
+       y > rect.y &&
+       y < rect.y + rect.height)
+    {
+        ///OnClick();
+    }
+}
+
 
 BotonNodo::BotonNodo(int x, int y, int w, int h):Boton("",x,y,w,h)
 {
@@ -42,7 +54,17 @@ void BotonNodo::Draw()
 	ofCircle(rect.x+rect.width/2,rect.y+rect.height/2, rect.height/3);
 }
 
-void BotonNodo::Update()
+
+
+BotonArista::BotonArista(int x, int y, int w, int h):Boton("",x,y,w,h)
 {
-	printf("dato\n");
+    rect = ofRectangle(x,y,w,h);
+}
+
+void BotonArista::Draw()
+{
+    ofSetColor(ofColor::cornflowerBlue);
+    ofRect(rect.x,rect.y, rect.width, rect.height);
+    ofSetColor(ofColor::yellow);
+    ofLine(rect.x+10,rect.y+10, rect.x+rect.width-10,rect.y+rect.height-10);
 }

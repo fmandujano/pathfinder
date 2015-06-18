@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C0175A51-3E7A-4A67-AE8D-3B642C48FDB4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Pathfinder</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8CA5A731A7359C9B6BE0FA770B9B30A9CB771277</key>
+		<string>https://github.com/fmandujano/pathfinder.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Pathfinder.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8CA5A731A7359C9B6BE0FA770B9B30A9CB771277</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/fmandujano/pathfinder.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8CA5A731A7359C9B6BE0FA770B9B30A9CB771277</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8CA5A731A7359C9B6BE0FA770B9B30A9CB771277</string>
+			<key>IDESourceControlWCCName</key>
+			<string>pathfinder</string>
+		</dict>
+	</array>
+</dict>
+</plist>

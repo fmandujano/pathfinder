@@ -23,6 +23,9 @@ class ofApp : public ofBaseApp
     
     void drawEditor();
     void drawSimulacion();
+    void updateEditor();
+    void updateSimulacion();
+    
     
     enum EEstado
     {
@@ -36,4 +39,5 @@ class ofApp : public ofBaseApp
 	std::vector<Boton*> botones;
 	Boton *botonBFS, *botonDFS, *botonAstar;
 	BotonNodo *botonNodo;
+    BotonArista* botonArista;
 };
